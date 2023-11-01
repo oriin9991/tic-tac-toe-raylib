@@ -73,12 +73,10 @@ Game game(Ticbox boxes[9],Rectangle mouse,int turn){
 	for(int i = 0; i < 9; i++){		
 			if (selectBox(boxes[i].box, mouse)&&turn%2!=0&&boxes[i].selected==0&&!end){
 				boxes[i].selected = 1;
-				std::cout << i<<std::endl;
 				turn++;
 			}
 			else if(selectBox(boxes[i].box, mouse)&&turn%2==0&&boxes[i].selected==0&&!end){
 				boxes[i].selected = 2;
-				std::cout << i<<std::endl;
 				turn++;
 			}
 		if(boxes[i].selected==1) DrawRectangleRec(boxes[i].box,GREEN);
